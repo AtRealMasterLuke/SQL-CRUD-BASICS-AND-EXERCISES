@@ -19,7 +19,7 @@ select name from people.cats;
 select name, age from people.cats;
 /*The WHERE clause is more specific*/
 USE people;
-SELECT * FROM cats WHERE age=4;
+SELECT * FROM cats WHERE age=4;/*we first of all go to the age column, to the rows that are equal to 4, then return all the columns where this is true*/
 SELECT * FROM cats WHERE name='Egg';
 select name, breed from people.cats;
 select name, age from people.cats where breed = 'Tabby';
