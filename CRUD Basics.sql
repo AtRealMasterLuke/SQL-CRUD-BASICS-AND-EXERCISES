@@ -27,7 +27,8 @@ select * from people.cats where cat_id = age;
 select cat_id, age from people.cats where cat_id = age;
 /* Let's use aliases for better comprehension of our results*/
 select cat_id as id, name from people.cats;
-/*UPDATE: let's alter the existing data*/
+/*UPDATE: let's alter the existing data
+Try to always SELECT before updating*/
 update people.cats set breed = 'Shorthair' where breed = 'tabby';
 update people.cats set age = 14 where name = 'misty';
 /*change Jackson's name to Jack*/
@@ -44,4 +45,4 @@ delete from people.cats where age = 4;
 /*DELETE cats whose age is the same as their cat_id*/
 delete from people.cats where age = cat_id;
 /*DELETE all cats 🙀*/
-delete from people.cats;
+delete from people.cats;/*This deletes all rows. To delete the table, you use: DROP TABLE <tablename>*/
