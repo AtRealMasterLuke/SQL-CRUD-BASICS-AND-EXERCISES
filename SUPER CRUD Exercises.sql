@@ -21,14 +21,14 @@ values('t-shirt', 'white', 'S', 10),
 ('polo shirt', 'red', 'M', 5),
 ('tank top', 'white', 'S', 200),
 ('tank top', 'blue', 'M', 15);
-select * from shirts_db.shirts;
+select * from shirts;
 /*Add A New Shirt
 Purple polo shirt, size M last worn 50 days ago*/
 insert INTO shirts (color, article, shirt_size, last_worn)
 values('purple', 'polo shirt', 'M', 50);
 /*SELECT all shirts
 But Only Print Out Article and Color*/
-select article, color from shirts_db.shirts;
+select article, color from shirts;
 /*SELECT all medium shirts
 Print Out Everything But shirt_id*/
 select article, color, shirt_size, last_worn from shirts_db.shirts where shirt_size = 'M';
