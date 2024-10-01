@@ -12,6 +12,9 @@ CREATE TABLE shirts
     PRIMARY KEY(shirt_id)
   );
 
+-- To tell what database we are currently using one could run:
+select database();
+
 insert into shirts (article, color, shirt_size, last_worn)
 values('t-shirt', 'white', 'S', 10),
 ('t-shirt', 'green', 'S', 200),
@@ -34,22 +37,22 @@ Print Out Everything But shirt_id*/
 select article, color, shirt_size, last_worn from shirts_db.shirts where shirt_size = 'M';
 /*Update all polo shirts
 Change their size to L*/
-update shirts_db.shirts set shirt_size = 'L' where article = 'polo shirt';
+update shirts set shirt_size = 'L' where article = 'polo shirt';
 /*Update the shirt last worn 15 days ago
 Change last_worn to 0*/
-update shirts_db.shirts set last_worn = 0 where last_worn = 15;
+update shirts set last_worn = 0 where last_worn = 15;
 /* Update all white shirts
 Change size to 'XS' and color to 'off white'*/
-update shirts_db.shirts set shirt_size = 'XS', color = 'off white' where color = 'white';
+update shirts set shirt_size = 'XS', color = 'off white' where color = 'white';
 /* Delete all old shirts
 Last worn 200 days ago*/
-delete from shirts_db.shirts where last_worn = 200;
+delete from shirts where last_worn = 200;
 /* Delete all tank tops
 Your tastes have changed...*/
-delete from shirts_db.shirts where article = 'tank top';
+delete from shirts where article = 'tank top';
 /* Delete all shirts
 Catastrophe!*/
-delete from shirts_db.shirts;
+delete from shirts;
 /*Drop the entire shirts table
 Catastrophe Again!*/
 drop table shirts;
