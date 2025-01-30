@@ -1,3 +1,6 @@
+USE people;
+show tables;
+select * from cats;
 CREATE TABLE cats 
   ( 
      cat_id INT AUTO_INCREMENT, 
@@ -14,6 +17,8 @@ VALUES ('Ringo', 'Tabby', 4),
        ('Misty', 'Tabby', 13),
        ('George Michael', 'Ragdoll', 9),
        ('Jackson', 'Sphynx', 7);
+
+select breed, count(*) from cats where age = 4;
 select name from people.cats;
 /*selecting 2 or more columns from the table*/
 select name, age from people.cats;
