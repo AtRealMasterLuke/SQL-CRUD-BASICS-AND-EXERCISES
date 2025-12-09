@@ -1,0 +1,9 @@
+# Always count .sql as SQL in language stats
+*.sql linguist-language=SQL
+*.sql linguist-detectable=true
+*.sql linguist-generated=false
+*.sql linguist-vendored=false
+
+# If you ever keep SQL under folders that Linguist might ignore, keep them countable
+migrations/** linguist-generated=false
+migrations/** linguist-vendored=false
